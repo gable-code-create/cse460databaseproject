@@ -5,11 +5,11 @@
 -- Dataset folder used here: C:/Users/frict/Desktop/New folder/Data
 -- If your folder changes, replace that path in the COPY commands.
 -- =========================================================
-
+-- added NULL::integer for compability fixes with postgres on mac
 SET client_encoding = 'UTF8';
 SET datestyle = 'ISO, MDY';
 
--- Start clean for repeatable demos
+-- Start over clean for demo
 TRUNCATE TABLE penalties, playerstats, playparticipants, plays, drives, players, games, stadiums, teams, seasons RESTART IDENTITY CASCADE;
 
 -- Recreate staging schema
